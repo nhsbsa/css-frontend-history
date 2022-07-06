@@ -1,0 +1,35 @@
+// ==========================================================================
+// COMPONENTS / #HEADER IMAGE
+// ==========================================================================
+
+.nhsbsa-header__img {
+  max-width: 200px;
+}
+
+.nhsbsa-header {
+  background-color:#003087;
+  border-bottom: 10px solid #00A9CE;
+}
+
+.nhsbsa-logo{
+  fill: white;
+  width: 200px;
+}
+
+.nhsuk-header__link:focus > nhsbsa-logo{
+  fill: black;
+}
+
+.nhsbsa-header__service-name{
+  margin:0px;
+}
+
+@media (min-width: 990px) {
+  .nhsbsa-header__container {
+    padding: 10px 0px;
+  }
+  .nhsbsa-header__service-name{
+    font-size: 22px;
+    margin-left: 20px;
+  }
+}

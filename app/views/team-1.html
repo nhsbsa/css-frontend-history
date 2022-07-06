@@ -1,0 +1,309 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Team 1 - HWHC Frontend history - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">Team 1</h1>
+    </div>
+    <!-- PPC Online -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="ppc" class="nhsuk-heading-m">PPC Online</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22956</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/hwhc/ppc-online-start.png"><img class="service-img" src="/images/hwhc/ppc-online-start.png" alt="PPC online home page" /></a>
+      </div>
+      <p>Save money on NHS prescriptions by prepaying for them.</p>
+      <p>You can pay a set price for prescriptions for 3 or 12 months, no matter how many you need.</p>
+      <p>A prescription costs £9.35 per item, but prepaying for an unlimited number of prescriptions is:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>£30.25 for 3 months</li>
+        <li>£108.10 for 12 months (or 10 Direct Debit instalments of £10.81)</li>
+      </ul>
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>Work has been completed on converting PPC to the NHSUK toolkit, it's currently waiting to be tested.</p>
+      <p>NHSUK toolkit is available on this branch: <code>/feature/DEVELOP-NEW-TOOLKIT</code></p>
+      <p>You need tomcat v8.5 to run PPC Online locally.</p>
+      <p>You can access this locally at: <code>http://localhost:9094/buy-prescription-prepayment-certificate/start</code></p>
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Details to get through PPC
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <h4 class="nhsuk-heading-xs">Local application</h4>
+          <p>acc number: <code>32029501</code></p>
+          <p>sort code: <code>30 25 56</code></p>
+          <p>postcode: <code>NE15 8NY</code></p>
+        </div>
+      </details>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/PPC/ppc-online-cloud">PPC Online gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/start">PPC Online live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/start">PPC Online dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/start">PPC Online test environment</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/LISD/pages/66879628/HwHC+Eligibility+Checker">PPC Online environment docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- PPC Pharmacy -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="ppc-pharmacy" class="nhsuk-heading-m">PPC Pharmacy</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22951</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/hwhc/ppc-pharmacy-home.png"><img class="service-img" src="/images/hwhc/ppc-pharmacy-home.png" alt="PPC Pharmacy home page" /></a>
+      </div>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 7</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+        <span class="tech-tag bootstrap-tag">Boostrap</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/PPC/ppc-pharmacy-online">PPC Pharmacy gitlab repo</a></li>
+          <li><a href="http://fi2.nhsbsa.nhs.uk/PPCSYST1/pharmacy-ppc/login">PPC Pharmacy test environment</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/ppcpharmacyonline/login">PPC Pharmacy test environment</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/BPPC/pages/1584791910/PPC+Pharmacy+online+setup">PPC Pharmacy set up docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- PPC Telesales -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="ppc-telesales" class="nhsuk-heading-m">PPC Telesales</h2>
+      <p class="nhsuk-body-l">Toolkit version: Custom/Bootstrap v3</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/hwhc/ppc-telesales.png"><img class="service-img" src="/images/hwhc/ppc-telesales.png" alt="PPC Telesales home page" /></a>
+      </div>
+      <p>Check if you have an exemption from paying NHS costs</p>
+        
+      <p>An NHS exemption certificate helps you to pay for your NHS costs, such as prescriptions or dental treatment.</p>
+        
+      <p>What you can check</p>
+      <p>If you live in England, you can use this service to check if your NHS exemption:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>is still valid or will expire soon</li>
+        <li>entitles you to free NHS prescriptions</li>
+        <li>entitles you to free NHS dental check-ups and treatment</li>
+      </ul>
+      <p>You can access this locally at: <code>http://localhost:9092/ppc_telesales_webapp/</code>.</p>
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Details to get through PPC Telesales
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <h4 class="nhsuk-heading-xs">Local application</h4>
+          <h5 class="nhsuk-heading-xs">Login details:</h5>
+          <p>Username: <code>PPCTELE1</code></p>
+          <p>Password: <code>PPCTELE1</code></p>
+          
+          <h5 class="nhsuk-heading-xs">Form data:</h5>
+          <p>Surname: <code>Roberts</code></p>
+          <p>Postcode <code>NE158NY</code></p>
+        </div>
+      </details>
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>PPC Telesales is an older system used by staff at Bridge House.</p>
+      <p>PPC Telesales doesn't use a specific toolkit, it uses a mix of custom CSS, Bootstrap v3, and jQuery UI. This set is common on older/legacy applications.</p>
+      <p>PPC Telesales is one of the only services that uses Access Keys. We recently developed functionality for users to enable or disable the access keys depending on their preference. Their are users with accessibility needs that rely on the access key functionality.</p>
+      <p><a href="https://telesales-ak.herokuapp.com/">Prototype for the toggle accesskey functionality</a> (Username and PW: ppc)</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+        <span class="tech-tag bootstrap-tag">Boostrap</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/PPC/ppc-telesales">PPC Telesales gitlab repo</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/BPPC/pages/333086795/PPC+Telesales+Windows+-+JBoss">PPC Telesales set up docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- Am I exempt -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="am-i-exempt" class="nhsuk-heading-m">Am I Exempt</h2>
+      <p class="nhsuk-body-l">Toolkit version: NHSUK v2.0</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/hwhc/am-i-exempt-nhsuk.png"><img class="service-img" src="/images/hwhc/am-i-exempt-nhsuk.png" alt="Am I Exempt home page" /></a>
+      </div>
+      <p>Check if you have an exemption from paying NHS costs</p>
+        
+      <p>An NHS exemption certificate helps you to pay for your NHS costs, such as prescriptions or dental treatment.</p>
+        
+      <p>What you can check</p>
+      <p>If you live in England, you can use this service to check if your NHS exemption:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>is still valid or will expire soon</li>
+        <li>entitles you to free NHS prescriptions</li>
+        <li>entitles you to free NHS dental check-ups and treatment</li>
+      </ul>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/hwhc-am-i-exempt">Am I Exempt gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/check-my-nhs-exemption/start">Am I Exempt live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/check-my-nhs-exemption/start">Am I Exempt dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/check-my-nhs-exemption/start">Am I Exempt test environment</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/PROJBSA/pages/73269810/Am+I+Exempt+Service">Am I Exempt environment docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- Matex apply -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="matex-apply" class="nhsuk-heading-m">Matex Apply</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22951</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/hwhc/matex-apply.png"><img class="service-img" src="/images/hwhc/matex-apply.png" alt="Matex apply home page" /></a>
+      </div>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>Use this service to apply for maternity exemption certificates on behalf of new or expectant mothers.</p>
+      <p>A maternity exemption certificate entitles the mother to free prescriptions:</p>
+
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>while pregnant</li>
+        <li>for 12 months after the birth of the child</li>
+      </ul>
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>Work has been completed on converting Matex Apply to the NHSUK toolkit, it's currently waiting to be tested.</p>
+      <p>NHSUK toolkit is available on this branch: <code>/feature/nhsuk-toolkit-initial-conversion</code></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/matex/matex-apply">Matex Apply gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/apply-for-maternity-exemption/start">Matex Apply live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/apply-for-maternity-exemption/start">Matex Apply dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/apply-for-maternity-exemption/start">Matex Apply test environment</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/MATEX/overview">Matex Apply docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- Matex Register -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="matex-reg" class="nhsuk-heading-m">Matex Register</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/hwhc/matex-reg.png"><img class="service-img" src="/images/hwhc/matex-reg.png" alt="Matex Register home page" /></a>
+      </div>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>Use this service to register to issue maternity exemption certificates on behalf of new or expectant mothers.</p>
+
+      <p>You must be a midwife, practice nurse or health visitor registered with the Nursing and Midwifery Council (NMC) to create an account.</p>
+
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>Work has been completed on converting Matex Register to the NHSUK toolkit, it's currently waiting to be tested.</p>
+      <p>NHSUK toolkit is available on this branch: <code>/feature/DEVELOP-1.0</code></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/matex/matex-register-user">Matex Register gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/apply-for-maternity-exemption/register/start">Matex Register live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/apply-for-maternity-exemption/register/start">Matex Register dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/apply-for-maternity-exemption/register/start">Matex Register test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

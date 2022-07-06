@@ -1,0 +1,122 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Team 2 - HWHC Frontend history - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Team 2
+      </h1>
+    </div>
+    <!-- Eligibility checker -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="ec" class="nhsuk-heading-m">Eligibility Checker (EGC)</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/eligibility-checker.png" alt="Eligibility checker home page" />
+      </div>
+      <p>The Eligibility checker is a service that allows users to see if they get help to pay these NHS charges, such as: NHS prescriptions, travel to receive NHS treatment, etc</p>
+      <p>You can access this locally at: <code>http://localhost:8080/check-for-help-paying-nhs-costs/start</code>.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-ss">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/hwhc-eligibility-guide">EGC gitlab repo</a><!--<img class="copy-link__img" src="/images/icons/link.png" alt="" style="width:15px; cursor: pointer;" />--></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start">EGC live service</a><!--<button class="copyBtn" onclick="copyLink()">Copy link</button>--></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start">EGC dev environment</a><!--<button class="copyBtn" onclick="copyLink()">Copy link</button>--></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start">EGC test environment</a><!--<button class="copyBtn" onclick="copyLink()">Copy link</button>--></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/LISD/pages/66879628/HwHC+Eligibility+Checker">EGC environment set up docs</a><!--<button class="copyBtn" onclick="copyLink()">Copy link</button>--></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- LIS -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="lis" class="nhsuk-heading-m">Low income scheme (LIS)</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis.png" alt="LIS home page" />
+      </div>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>If you have a low income, the NHS Low Income Scheme could help you pay for medical costs such as; NHS prescription charges, NHS dental treatment charges, etc.</p>
+      <p>You can access this locally at: <code>http://localhost:10050/apply-for-help-with-nhs-costs/apply-online</code>.</p>
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>As of November 2021 there are 339 pages in the LIS application. The pages are created using YAML, which call HTML/Thymeleaf fragments.</p>
+      <p>As of May 2022 LIS has upgraded to Java 11.</p>
+
+      <h3 class="nhsuk-heading-s">Assessor view</h3>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis-assessor-view.png" alt="LIS assessor view sign in page" />
+      </div>
+      <p>The assessor view is built into LIS and is used by a team of assessors at Bridge house, who get a play back of applications in their own dashboard view.</p>
+      <p>The check your answers screens the users sees are played back to the assessors in the assessor view. It's the same HTML, but we use custom CSS to change the display in the assessor view.s</p>
+      <p>It's on the roadmap to decouple the assessor view from LIS.</p>
+      <p>You can access this locally at: <code>http://localhost:10050/apply-for-help-with-nhs-costs/sign-in</code>.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 11</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+        <span class="tech-tag yaml-tag">YAML</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/lis/hwhc-lis-apply-for-help">LIS gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/apply-online">LIS live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/apply-online">LIS dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/apply-online">LIS test environment</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/LISD/overview">LIS Environment set up docs</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/sign-in">Assessor view live</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/sign-in">Assessor view test</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/sign-in">Assessor view dev</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

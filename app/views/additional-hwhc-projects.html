@@ -1,0 +1,137 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+ Additional projects - HWHC Frontend history - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Additional HWHC projects
+      </h1>
+    </div>
+    <!-- Document manager -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="doc-man" class="nhsuk-heading-m">Document manager</h2>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>Document manager is used by internal staff to view and create reports.</p>
+      <p>Document manager is a singular code base that can be configured by teams. We completed accessibility fixes on the PECS and PPC document manager systems. They're 2 different systems, but come from the same code base. So we only had to complete the fixes once.</p>
+      <p>It's a legacy system that is not updated often. The accessibility fixes were the first update for years.</p>
+      <p>The code is hosted on SVN.</p>
+      <p>To access the Document manager test system you need to be on the Global VPN.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="http://fi2.nhsbsa.nhs.uk/PPCSYST1/DocumentManager/">PPC Doc man test environment</a></li>
+          <li><a href="http://fi2.nhsbsa.nhs.uk/PPCSYST1/PPCDocumentManager/pages/viewReports.do">PPC Doc man live environment</a></li>
+          <li><a href="http://fi2.nhsbsa.nhs.uk/PECSYST/DocumentManager/pages/viewReports.do">PECS Doc man live environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- PECs web -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="pecs-web" class="nhsuk-heading-m">PECS Web</h2>
+      <!-- <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis.png" alt="LIS home page" />
+      </div> -->
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>PECs web is an application used by internal staff to process prescription exemptions.</p>
+      <p>You need tomcat 8.5, access to the PECS db and a docker image to run this locally</p>
+      <p>Local url will be: <code>http://localhost:9095/pecs-web/</code></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/PROJBSA/pages/3421372514/Pecs-web+legacy+setup+guide">PECS web set up docs</a></li>
+          <li><a href="https://dps-gitlab.service.nhsbsa/prescriptions/TLRS/pecs-web">PECS web gitlab repo</a></li>
+        </ul>
+      </nav> 
+    </div>
+  </div>
+  <hr />
+  <div class="nhsuk-grid-row">
+    <!-- LIS -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="lis-form-ordering" class="nhsuk-heading-m">LIS Form Ordering</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis-form-ordering.png" alt="LIS Form Ordering home page" />
+      </div>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>Users who want to apply for the NHS Low income scheme can order paper forms to be delivered using LIS Form Ordering.</p>
+      
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>LIS form ordering is hosted on SVN and requires a Jboss server to run locally.</p>
+      <p>When deploying frontend changes to LIS form ordering remember to get the extract tested. The extract sends user data to the required department so they can complete the users request for printed LIS forms.</p>
+      <p>Local url will be: <code>http://localhost:8080/LISWebApp/adminPage.do</code></p>
+      <p>username: <code>admin</code></p>
+      <p>password: <code>admin12#</code></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://applications.nhsbsa.nhs.uk/LISWebAppStaticData/begin.do">LIS form ordering live service</a></li>
+          <li><a href="http://fi2.nhsbsa.nhs.uk/LISSYST/LISWebAppStaticData/begin.do">LIS form ordering test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/related-nav';
+@import 'components/side-nav';
+@import 'components/tech-tags';
+@import 'components/timeline';
+@import 'components/header-image';
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below...
+///////////////////////////////////////////
+
+/* code */
+li code, p code, td code {
+  background-color: #fff;
+  color: #d14;
+  padding: 2px 8px;
+  word-break: break-word;
+}
+
+/*service pages */
+.service-img{
+  width:200px;
+  border: 1px solid #005eb8;
+}
+.link-nav {
+  border-top:5px solid #005eb8;
+  padding-top:10px;
+}
+.tech-container > .tech-tag {
+  margin-bottom: 5px;
+}
