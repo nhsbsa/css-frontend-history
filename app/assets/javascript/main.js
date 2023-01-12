@@ -21,24 +21,3 @@ if (techTagCount.length != 0) {
 if (serviceCount.length != 0) {
   document.getElementById("service-amount").innerHTML = serviceCount.length; // updated service counter display
 }
-
-// copy link button works with 1 on page
-// var copyBtn = document.getElementById('copyBtn');
-// var link = copyBtn.previousSibling.href;
-// console.log(link);
-// function copyLink(){
-//   navigator.clipboard.writeText(link);
-// }
-
-// var copyBtn = document.querySelectorAll('.copyBtn');
-// console.log(copyBtn);
-
-// function copyLink(this){
-//   for (var i = 0; i < copyBtn.length; i++) {
-//     var copy = {
-//       link: copyBtn[i].previousSibling.href
-//     }
-//     navigator.clipboard.writeText(copy.link);
-//   }
-// }
-

@@ -1,0 +1,73 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Team 2 - HWHC Frontend history - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Team 2
+      </h1>
+    </div>
+    <!-- Eligibility checker -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="ec" class="nhsuk-heading-m">Department of Health and Social Care's Discontinuations and Shortages portal (DaSH)</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/dash.png" alt="DaSH Homepage" />
+      </div>
+      <p>DHSC SupplyMan is a web application for managing potential supply shortages on the behalf of DHSC and Marketing Authorisation Holders within the UK.</p>
+      <p>You can access this locally at: <code>http://localhost:8081/</code>.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/CSS/supplyman">DaSH gitlab repo</a></li>
+          <li><a href="#">DaSH live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/supplyman/login">DaSH dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/supplyman/login">DaSH  test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+    
+{% endblock %}
