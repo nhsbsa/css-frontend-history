@@ -1,0 +1,279 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Student services - CSS Frontend history - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Student services
+      </h1>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- SB public -->
+      <h2 id="sb-public" class="nhsuk-heading-m">Student Bursaries (SB) - Public</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/stu-services/sb-public.png">
+          <img class="service-img" src="/images/stu-services/sb-public.png" alt="SB public homepage" />
+        </a>
+      </div>
+      <p>The NHS offers bursaries to help with the cost of tuition and living expenses for certain healthcare courses. Eligible students include those studying nursing, midwifery, and certain allied health professions.</p>
+      <p>The bursary amount varies depending on the course and the student's financial situation.</p>
+      <p>SB public is a public facing service for students to register and apply for bursaries.</p>
+      <p>You can access this locally at: <code>http://localhost:8081/nhssb/</code>.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s"><span class="nhsuk-u-visually-hidden">SB public: </span>Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB public: </span>Gitlab repo</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB public: </span>Live service</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB public: </span>Dev environment</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB public: </span>Test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- SB Web -->
+      <h2 id="sb-web" class="nhsuk-heading-m">Student Bursaries - Web</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/corp-services/dash.png">
+          <img class="service-img" src="/images/corp-services/dash.png" alt="SB web homepage" />
+        </a>
+      </div>
+      <p>SB web is an internal service for NHS colleagues to manage SB applications.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s"><span class="nhsuk-u-visually-hidden">SB web: </span>Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB web: </span>Gitlab repo</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB web: </span>Live service</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB web: </span>Dev environment</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SB web: </span>Test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- SWB public -->
+      <h2 id="swb-public" class="nhsuk-heading-m">Social Work Bursary (SWB) - Public</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/stu-services/swb-register.png">
+          <img class="service-img" src="/images/stu-services/swb-register.png" alt="SWB public homepage" />
+        </a>
+      </div>
+      <p></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s"><span class="nhsuk-u-visually-hidden">SWB public: </span>Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/CSS/swb-public"><span class="nhsuk-u-visually-hidden">SWB public: </span>Gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/myfunding/landing"><span class="nhsuk-u-visually-hidden">SWB public: </span>Live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/myfunding/landing"><span class="nhsuk-u-visually-hidden">SWB public: </span>Dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/myfunding/landing"><span class="nhsuk-u-visually-hidden">SWB public: </span>Test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- SWB web -->
+      <h2 id="swb-web" class="nhsuk-heading-m">Social Work Bursary (SWB) - web</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/corp-services/dash.png">
+          <img class="service-img" src="/images/corp-services/dash.png" alt="DaSH Homepage" />
+        </a>
+      </div>
+      <p></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s"><span class="nhsuk-u-visually-hidden">SWB web: </span>Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SWB web: </span>Gitlab repo</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SWB web: </span>Live service</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SWB web: </span>Dev environment</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">SWB web: </span>Test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- LSF public -->
+      <h2 id="swb-web" class="nhsuk-heading-m">Learning Support Fund (LSF) - Public</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/corp-services/dash.png">
+          <img class="service-img" src="/images/corp-services/dash.png" alt="DaSH Homepage" />
+        </a>
+      </div>
+      <p></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s"><span class="nhsuk-u-visually-hidden">LSF - Public: </span>Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF - Public: </span>Gitlab repo</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF - Public: </span>Live service</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF - Public: </span>Dev environment</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF - Public: </span>Test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- LSF web -->
+      <h2 id="swb-web" class="nhsuk-heading-m">Learning Support Fund (LSF) - Web</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/corp-services/dash.png">
+          <img class="service-img" src="/images/corp-services/dash.png" alt="DaSH Homepage" />
+        </a>
+      </div>
+      <p></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s"><span class="nhsuk-u-visually-hidden">LSF web: </span>Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF web: </span>Gitlab repo</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF web: </span>Live service</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF web: </span>Dev environment</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF web: </span>Test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- LSF portal -->
+      <h2 id="swb-web" class="nhsuk-heading-m">Learning Support Fund (LSF) - Portal</h2>
+      <p class="nhsuk-body-l">Toolkit version: ??</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <a href="/images/corp-services/dash.png">
+          <img class="service-img" src="/images/corp-services/dash.png" alt="DaSH Homepage" />
+        </a>
+      </div>
+      <p></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-s">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-s"><span class="nhsuk-u-visually-hidden">LSF portal: </span>Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF portal: </span>Gitlab repo</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF portal: </span>Live service</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF portal: </span>Dev environment</a></li>
+          <li><a href="#"><span class="nhsuk-u-visually-hidden">LSF portal: </span>Test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+  
+    
+{% endblock %}
