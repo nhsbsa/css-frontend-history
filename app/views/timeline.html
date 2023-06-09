@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Timeline - HWHC Frontend history - NHSBSA
+  CSS Timeline - HWHC Frontend history - NHSBSA
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,15 +14,84 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-heading-xl">Craig Dixon's timeline</h1>
+      <h1 class="nhsuk-heading-xl">CSS timeline</h1>
+      <!-- 2023 -->
+      <h2 class="nhsuk-heading-l">2023</h2>
+      
+      <div class="nhsbsa-timeline nhsuk-u-margin-bottom-6">
+        <!-- June -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Update accessibility statements - Student Services</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">June 2022</p>
+          <p class="nhsbsa-timeline__description">Accessibility statements are now out of date.</p>
+          <p class="nhsbsa-timeline__description">Extra testing capacty required to test 'admin' pages that haven't previously been tested.</p>
+          <p class="nhsbsa-timeline__description"><a href="https://nhsbsauk.sharepoint.com.mcas.ms/:w:/r/sites/Accessibility/_layouts/15/Doc.aspx?sourcedoc=%7BF74F7013-62AB-49F5-B784-68491CA124AC%7D&file=Accessibility%20statement%20template%20V9.docx&action=default&mobileredirect=true">Updated statements available here</a></p>
+        </div>
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">TDAE - LSF</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">May 2023</p>
+          <p class="nhsbsa-timeline__description">Add pages for the TDAE journeys on LSF Portal, LSF Web and LSF Public.</p>
+          <p class="nhsbsa-timeline__description">Includes updated accessible character count that works similarly to the GOVUK component.</p>
+        </div>
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Updated toolkit webjars - LSF</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">March 2023</p>
+          <p class="nhsbsa-timeline__description">Added in the NHSUK toolkit webjar, this will make it easier to update in the future.</p>
+          <p class="nhsbsa-timeline__description">When new versions of the toolkit are released, we'll be able to pull them in by updating the version number in the pom and property file.</p>
+        </div>
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Multi file upload - LSF</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">February 2023</p>
+          <p class="nhsbsa-timeline__description">Investigated importing the MOJ multi file upload component into student services.</p>
+          <p class="nhsbsa-timeline__description">Too many unknowns were raised with storing the files. Worked stopped on implementing it until these questions could be answered.</p>
+          <p class="nhsbsa-timeline__description">WIP branch available at <code>/feature/multi-upload-poc</code></p>
+          <p class="nhsbsa-timeline__description"><a href="https://bsa2468.atlassian.net/l/cp/SmwC0WEh">Write up of multi upload findings</a></p>
+        </div>
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Toolkit conversion - LSF Public</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">January 2023</p>
+          <p class="nhsbsa-timeline__description">Convert LSF Public from the NHSBSA elements toolkit to the NHSUK v6.2</p>
+          <p class="nhsbsa-timeline__description">Included improving accessibility by adding aria features that were missing.</p>
+        </div>
+      </div>
 
+          
+
+      <!-- 2022 -->
       <h2 class="nhsuk-heading-l">2022</h2>
       
       <div class="nhsbsa-timeline">
-        <!-- May -->
         <div class="nhsbsa-timeline__item">
           <div class="nhsbsa-timeline__header">
-            <h3 class="nhsuk-heading-m">Filter bar</h3>
+            <h3 class="nhsuk-heading-m">Toolkit conversion - LSF</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">November 2022</p>
+          <p class="nhsbsa-timeline__description">Update to NHSUK v6.2</p>
+        </div>
+
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Accessibility fixes - SB</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">October 2022</p>
+          <p class="nhsbsa-timeline__description">Update and add aria attributes to improve accessibility.</p>
+          <p class="nhsbsa-timeline__description">Minor bug fixes.</p>
+        </div>
+
+        <!-- July -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Filter bar - DASH</h3>
           </div>
           <p class="nhsbsa-timeline__date">July 2022</p>
           <p class="nhsbsa-timeline__description">Created a filter bar for DASH project to replace side bar and dropdowns.</p>
@@ -55,10 +124,5 @@
         </div>
       </div>
     </div>
-  </div>
-    
-  <style>
-    
-  </style>
-  
+  </div> 
 {% endblock %}
