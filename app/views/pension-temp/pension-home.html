@@ -34,16 +34,19 @@
       <div class="nav-row mt-0">
         <div class="img-container pt-3">
           <img class="header-img mb-2 mb-md-0" src="/images/nhs-header-left.png" alt="My NHS Pension" />
-          <img class="header-img mb-2 mb-md-0" src="/images/nhs-header-right.png" alt="NHS" />
+          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+            <path class="nhsuk-logo__background" fill="#fff" d="M0 0h40v16H0z"></path>
+            <path class="nhsuk-logo__text" fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          </svg>
         </div>
         <nav class="navbar-fixed-top pl-0 pr-0 mr-0 navbar nav-color navbar-expand-md navbar-dark bd-navbar">
           <div class="d-flex">
             <div class="w-100 text-end">
-              <button class="nav-pension-btn mb-2 nhsuk-button nhsuk-button--reverse navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">Menu</button>
+              <button class="nav-pension-btn mt-2 mb-2 nhsuk-button nhsuk-button--reverse navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">Menu</button>
             </div>
           </div>
           <div class="nav collapse navbar-collapse text-right" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
+            <ul class="navbar-nav mt-2 mt-md-0 ml-auto flex-nowrap">
               <li class="nav-item">
                 <a class="nav-link active nav-link-active" href="/pension-temp/pension-home">Home</a>
               </li>
@@ -53,8 +56,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="/information/help-and-information/">Help and information</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sign in</a>
+              <li class="sign-in-nav-item nav-item">
+                <a class="sign-in-link nav-link" href="#">Sign in</a>
               </li>
             </ul>
           </div>
@@ -66,7 +69,7 @@
   <!-- Skip Links -->
   <main role="main" id="content">
     <div class="container">
-      <div class="row pt-5">
+      <div class="row pt-3 pt-lg-5">
         <div class="col-lg-10">
           <h1>Home</h1>
           <p>Welcome to My NHS Pension.</p>
@@ -172,20 +175,32 @@
   </footer>
 
   <style>
+    :root { 
+      --main-colour-black: #212b32;
+      --main-colour-yellow: #ffeb3b;
+      --main-colour-white: #FFF;
+      --main-colour-nhs-blue: #005eb8;
+    }
     html {
       background-color: #d8dde0;
       font-family: Arial, Helvetica, sans-serif;
+    }
+    a.skip-link {
+      display: block;
+      padding: 10px;
+      background: var(--main-colour-yellow);
+      color: var(--main-colour-black);
     }
     .card {
       border: none;
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     }
-    .card:hover {
+    .card:hover, .card:focus-within {
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
     .nhsbsa-pension-header {
-      background: #005eb8;
+      background: var(--main-colour-nhs-blue);
     }
     .img-container {
       display: flex;
@@ -202,23 +217,23 @@
     }
     footer {
       background: #d8dde0;
-      border-top: 4px solid #005eb8;
+      border-top: 4px solid var(--main-colour-nhs-blue);
     }
     .footer-nav__list-item {
       font-size: 16px;
-      display: inline-block;
-      margin-right: 1em;
+      display: block;
+      margin-bottom: 1em;
     }
     a {
-      color: #005eb8;
+      color: var(--main-colour-nhs-blue);
     }
     a:active {
       color: #002f5c;
     }
     a:focus {
-      background-color: #ffeb3b;
-      box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
-      color: #212b32;
+      background-color: var(--main-colour-yellow);
+      box-shadow: 0 -2px var(--main-colour-yellow), 0 4px var(--main-colour-black);
+      color: var(--main-colour-black);
       outline: 4px solid rgba(0, 0, 0, 0);
       text-decoration: none;
     }
@@ -229,22 +244,22 @@
       color: #7c2855;
     }
     .nav-link {
-     color: #fff !important;
+     color: var(--main-colour-white) !important;
      text-decoration: none;
      transition: none;
     }
     .nav-link:hover {
-      color: #fff !important;
+      color: var(--main-colour-white) !important;
       text-decoration: underline;
     }
     .nav-link:focus {
-      color: #212b32 !important;
+      color: var(--main-colour-black) !important;
     }
     .nav-pension-btn{
-      color: #212b32 !important;
+      color: var(--main-colour-black) !important;
     }
     .nav-pension-btn:active {
-      color: #fff !important;
+      color: var(--main-colour-white) !important;
     }
     .nhsuk-button {
       font-weight: 400;
@@ -258,7 +273,7 @@
       border-radius: 4px;
       box-shadow: 0 4px 0 #00401e;
       box-sizing: border-box;
-      color: #fff;
+      color: var(--main-colour-white);
       cursor: pointer;
       display: inline-block;
       font-weight: 600;
@@ -293,7 +308,7 @@
       }
     }
     .nhsuk-button:link,.nhsuk-button:visited,.nhsuk-button:active,.nhsuk-button:hover {
-      color: #fff;
+      color: var(--main-colour-white);
       text-decoration: none;
     }
     .nhsuk-button::-moz-focus-inner {
@@ -304,21 +319,21 @@
       background-color: #00662f;
     }
     .nhsuk-button:focus {
-      background: #ffeb3b;
-      box-shadow: 0 4px 0 #212b32;
-      color: #212b32;
+      background: var(--main-colour-yellow);
+      box-shadow: 0 4px 0 var(--main-colour-black);
+      color: var(--main-colour-black);
       outline: 4px solid rgba(0,0,0,0);
     }
     .nhsuk-button:focus:visited {
-      color: #212b32;
+      color: var(--main-colour-black);
     }
     .nhsuk-button:focus:visited:active {
-      color: #fff;
+      color: var(--main-colour-white);
     }
     .nhsuk-button:active {
       background: #00401e;
       box-shadow: none;
-      color: #fff;
+      color: var(--main-colour-white);
       top: 4px;
     }
     .nhsuk-button::before {
@@ -335,31 +350,46 @@
       top: -6px;
     }
     .nhsuk-button--reverse {
-      background-color: #fff;
-      box-shadow: 0 4px 0 #212b32;
-      color: #212b32;
+      background-color: var(--main-colour-white);
+      box-shadow: 0 4px 0 var(--main-colour-black);
+      color: var(--main-colour-black);
     }
     .nhsuk-button--reverse:hover {
       background-color: #f2f2f2;
-      color: #212b32;
+      color: var(--main-colour-black);
     }
     .nhsuk-button--reverse:focus {
-      background: #ffeb3b;
-      box-shadow: 0 4px 0 #212b32;
-      color: #212b32;
+      background: var(--main-colour-yellow);
+      box-shadow: 0 4px 0 var(--main-colour-black);
+      color: var(--main-colour-black);
       outline: 4px solid rgba(0,0,0,0);
     }
     .nhsuk-button--reverse:active {
-      background: #212b32;
+      background: var(--main-colour-black);
       box-shadow: none;
-      color: #fff;
+      color: var(--main-colour-white);
       top: 4px;
     }
     .nhsuk-button--reverse:link {
-      color: #212b32;
+      color: var(--main-colour-black);
     }
     .nhsuk-button--reverse:link:active {
-      color: #fff;
+      color: var(--main-colour-white);
+    }
+    .navbar-dark .navbar-toggler {
+       border-color: none;
+       border: none !important;
+       transition: none;
+    }
+    .navbar-nav {
+      width:100%;
+    }
+    .nav-link-active {
+      text-decoration: none;
+      border-bottom: 3px solid #d8dde0;
+    }
+    .nav-link-active:focus {
+      border-bottom: 3px solid transparent;
     }
     @media only screen and (min-width:499px) {
       .img-container {
@@ -384,17 +414,35 @@
         align-content: center;
         align-items: center;
       }
+      .footer-nav__list-item {
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 1em;
+      }
     }
     @media only screen and (min-width:768px) {
       .nav-link {
-        color: #fff !important;
+        color: var(--main-colour-white) !important;
         transition: none;
         text-decoration: none;
         margin-left:10px;
       }
-      .nav-link-active {
+      .sign-in-nav-item{
+        margin-left: auto;
+      }
+      .sign-in-link{
+        border: 2px solid var(--main-colour-white);
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .sign-in-link:hover{
+        background: var(--main-colour-white);
+        color: #003087 !important;
         text-decoration: none;
-        border-bottom: 3px solid	#d8dde0;
+      }
+      .sign-in-link:focus{
+        border: 2px solid transparent;
+        box-shadow: 0 -2px transparent, 0 4px var(--main-colour-black);
       }
     }
   </style>
@@ -415,3 +463,5 @@
 - Sorted footer links out
 
 -->
+
+<!-- Sort out nav links and card focus/hover focus-within -->
