@@ -441,11 +441,16 @@ footer {
   }
 }
 @media only screen and (min-width:768px) {
+  .nav-item:first-child {
+    margin-left: 0px;
+  }
+  .nav-item{
+    margin-left: 10px;
+  }
   .nav-link {
     color: var(--main-colour-white) !important;
     transition: none;
     text-decoration: none;
-    margin-left:10px;
   }
   .sign-in-nav-item{
     margin-left: auto;
