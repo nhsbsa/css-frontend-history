@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Help and information - My NHS Pension - NHSBSA</title>
+  <title>Sign in - My NHS Pension - NHSBSA</title>
   <meta name="description" content="My NHS Pension" />
   <meta name="keywords" content="" />
   <meta charset="utf-8" />
@@ -70,89 +70,51 @@
   <!-- Skip Links -->
   <main role="main" id="content">
     <div class="container">
-      <div class="row pt-3 pt-lg-4 g-lg-5">
-        <div class="col-12 col-lg-8">
-          <div class="row">
-            <div class="col-12">
-              <h1>Help and information</h1>
-              <p>You can find out more about managing your NHS Pension by clicking on the tiles.</p>
-              <p>If you would like further information, you can get in touch with our Customer Contact Centre using the details provided.</p>   
-            </div>
-          </div>
-          <div class="row pb-5 gy-4 g-sm-5">
-            <!-- Member hub -->
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-              <div class="card">
-                <img src="/images/pension-temp/portal-graphics-member-hub.jpg" class="card-img-top" alt="">
-                <div class="card-body text-center">
-                  <a href="https://www.nhsbsa.nhs.uk/member-hub/" class="stretched-link" target="_blank" rel="noopener">Member hub<span class="visually-hidden"> (opens in a new tab)</span></a>
-                </div>
-              </div>
-            </div>
-            <!--/. -->
+      <div class="row py-3 py-lg-4">
+        <div class="col-12 col-md-10">
+          
 
-            <!-- Pensioner hub -->
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-              <div class="card">
-                <img src="/images/pension-temp/portal-graphics-pensioner-hub.jpg" class="card-img-top" alt="">
-                <div class="card-body text-center">
-                  <a href="https://www.nhsbsa.nhs.uk/pensioner-hub" class="stretched-link" target="_blank" rel="noopener">Pensioner hub<span class="visually-hidden"> (opens in a new tab)</span></a>
-                </div>
-              </div>
-            </div>
-            <!--/. -->
-
-            <!-- Changes of circumstances -->
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-              <div class="card">
-                <img src="/images/pension-temp/portal-graphics-change-of-circumstances.jpg" class="card-img-top" alt="">
-                <div class="card-body text-center">
-                  <a href="https://www.nhsbsa.nhs.uk/pensioner-hub/change-circumstances" class="stretched-link" target="_blank" rel="noopener">Change of circumstances<span class="visually-hidden"> (opens in a new tab)</span></a>
-                </div>
-              </div>
-            </div>
-            <!--/. -->
-
-            <!-- Re-employment status -->
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-              <div class="card">
-                <img src="/images/pension-temp/portal-graphics-re-employment.jpg" class="card-img-top" alt="">
-                <div class="card-body text-center">
-                  <a href="https://www.nhsbsa.nhs.uk/pensioner-hub/re-employment" class="stretched-link" target="_blank" rel="noopener">Re-employment<span class="visually-hidden"> (opens in a new tab)</span></a>
-                </div>
-              </div>
-            </div>
-            <!--/. -->
+          <form name="form" method="post" action="#">
+            <fieldset aria-describedby="sign-in-terms">
+              <legend>
+                <h1>Sign in</h1>
+              </legend>
             
-            <!-- Bereavement -->
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-              <div class="card">
-                <img src="/images/pension-temp/portal-graphics-bereavements.jpg" class="card-img-top" alt="">
-                <div class="card-body text-center">
-                  <a href="https://www.nhsbsa.nhs.uk/pensioner-hub/bereavement" class="stretched-link" target="_blank" rel="noopener">Bereavement<span class="visually-hidden"> (opens in a new tab)</span></a>
-                </div>
+              <div id="sign-in-terms" class="callout-box p-4 my-3">
+                <p class="pb-0 mb-0">By signing in you accept the following <a href="/pension-temp/terms">terms and conditions</a>.</p>
               </div>
-            </div>
-            <!-- /. -->
-          </div>
-        </div>
-        <div class="col-12 col-lg-4">
-          <div class="sidebar-panel mb-5">
-            <div class="sidebar-title">
-              <h2 class="mb-0">Contacts</h2>
-            </div>
-            <div class="sidebar-content">
-              <h3>Phone</h3>
-              <p>Tel: 0300 330 1346</p>
-              <p>(Outside the UK +44 191 279 0571)</p>
-        
-              <h3>Email</h3>
-              <p class="text-break">nhsbsa.pensionsmember@nhsbsa.nhs.uk</p>
+              
+              <div class="form-group mb-3">
+                <label class="nhsuk-label" for="username">Username</label>
+                <input required="" name="username" id="username" type="text" class="nhsuk-input nhsuk-input--width-20">
+                <!-- Don't use max length attributes, don't turn autocomplete and don't use placeholder text when it matches the label -->
+              </div>
+              
+              <div class="form-group mb-3">
+                <label class="nhsuk-label" for="password">Password</label>
+                <input id="password" name="password" type="password" class="nhsuk-input nhsuk-input--width-20">
+              </div>
                     
-              <h3>Opening times</h3>
-              <p>Monday to Friday, 8am to 6pm</p>
-            </div>
-          </div>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">Forgotten Password?</a>
+                </li>
+                <li>
+                  <a href="#">Forgotten Username?</a>
+                </li>
+                
+              </ul>
+              
+              <button class="nhsuk-button">Continue</button>
+            </fieldset>
+          </form>
+
+          <!-- Register -->
+          <h2 class="panel-title">New User Registration</h2>
+          <p>To register for your My NHS Pension account, please click 'Register' below.</p>
+          <p>The registration process takes just a few minutes. Once you have successfully signed in, you will be able to change your password within the Your Account page.</p>
+          
+          <a class="nhsuk-button" href="#">Register</a>
         </div>
       </div>
     </div>      
